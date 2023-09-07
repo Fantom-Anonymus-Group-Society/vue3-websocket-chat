@@ -1,0 +1,33 @@
+body{
+  overflow: hidden;
+}
+
+.message-list{
+  overflow-y: scroll;
+}
+
+.h-10{
+  height: 10vh;
+}
+
+.h-80{
+  height: 80vh;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.user-item, .chat-item{
+  transition: all 500ms;
+  padding: 10px;
+}
+
+.user-item:hover, .chat-item:hover{
+  background-color: #565f686b;
+}
+
+.chat-list{
+  overflow-y: scroll;
+  height: 75vh;
+}

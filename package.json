@@ -1,0 +1,30 @@
+{
+  "name": "postupay-front",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kyvg/vue3-notification": "^2.3.5",
+    "@types/qs": "^6.9.7",
+    "axios": "^0.27.2",
+    "dotenv": "^16.3.1",
+    "nprogress": "^0.2.0",
+    "qs": "^6.11.2",
+    "vee-validate": "^4.10.7",
+    "vue": "^3.3.4",
+    "vue-jwt-decode": "^0.1.0",
+    "vue-nprogress": "^0.2.0",
+    "vue-router": "^4.1.2",
+    "vuex": "^4.1.0",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.0"
+  }
+}
