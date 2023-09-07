@@ -4,7 +4,7 @@
             <h3>{{ getCompanionName }}</h3>
             <hr>
         </div>
-        <div class="h-80 p-3 message-list">
+        <div id="bottomLine" ref="bottomLine" class="h-80 p-3 message-list">
             <div v-for="message in messages" :key="message.id">
                 <MessageItem :message="message" />
             </div>
@@ -57,6 +57,12 @@
             this.loadMessages(chat)
             const connection = new WebSocket(`${SOCKET_HOST}/api/messages/${chat.id}/?authorization=${JwtService.getTokenHeader()?.Authorization}`)
             connection.onmessage = this.updateMessageList
+        },
+        mounted(){
+            setTimeout(() => {
+                let elem = document.querySelector('#bottomLine')
+                elem.scrollTop = elem.scrollHeight
+            }, 500)
         },
         computed: {
             getCompanionName(){
@@ -114,7 +120,7 @@
                     return
                 }
 
-                this.messages.unshift(message)
+                this.messages.push(message)
             },
         }
     }
